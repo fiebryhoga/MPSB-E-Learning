@@ -21,7 +21,7 @@ const Navbar = () => {
           </div>
         </Link>
       </div>
-      <Link href="/Pages/Login" passHref>
+      <Link href="/Pages/SignUp" passHref>
         <div className="bg-[#FED767] py-[8.4px] px-3 rounded-full text-xs font-semibold">
           Masuk
         </div>
