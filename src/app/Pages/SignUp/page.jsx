@@ -20,23 +20,30 @@ export default function SignUp() {
             className="w-full h-[48px] border border-black rounded-lg placeholder:opacity-80 placeholder:text-black px-6 py-1 text-base outline-none tracking-wider"
             placeholder="Nama Lengkap"
             type="text"
+            required
           />
           <input
             className="w-full h-[48px] border border-black rounded-lg placeholder:opacity-80 placeholder:text-black px-6 py-1 text-base outline-none tracking-wider"
             placeholder="Email"
             type="text"
+            required
           />
           <input
             className="w-full h-[48px] border border-black rounded-lg placeholder:opacity-80 placeholder:text-black px-6 py-1 text-base outline-none tracking-wider"
             placeholder="Kata Sandi"
             type="text"
+            required
           />
           <input
             className="w-full h-[48px] border border-black rounded-lg placeholder:opacity-80 placeholder:text-black px-6 py-1 text-base outline-none tracking-wider"
             placeholder="Konfirmasi Sandi"
             type="text"
+            required
           />
-          <button className="w-full h-[48px] border border-black rounded-lg text-white text-lg font-semibold px-6 py-1  outline-none tracking-wider hover:bg-white hover:border-[#112A46] hover:text-[#112A46] transition-all bg-[#112A46]">
+          <button
+            className="w-full h-[48px] border border-black rounded-lg text-white text-lg font-semibold px-6 py-1  outline-none tracking-wider hover:bg-white hover:border-[#112A46] hover:text-[#112A46] transition-all bg-[#112A46]"
+            type="submit"
+          >
             Daftar
           </button>
         </form>

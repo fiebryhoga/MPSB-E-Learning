@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="flex flex-col justify-start items-start w-[50%] gap-4">
         <div className="flex flex-row gap-2 mb-6 items-center">
           <Image
-            src="/mangcoding.png"
+            src="/Assets/Images/Mangcoding.svg"
             alt="Mangcoding"
             width={30}
             height={30}
