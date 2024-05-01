@@ -6,9 +6,7 @@ import Image from "next/image";
 export default function Login() {
   return (
     <main className="flex flex-col">
-      <div className="flex flex-col py-2 px-8">
-        <Navbar />
-      </div>
+      <Navbar />
 
       <div className="px-[350px] py-[50px] flex flex-col">
         <h1 className="text-2xl font-bold text-center mb-6 tracking-wide">

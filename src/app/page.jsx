@@ -1,15 +1,17 @@
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
+import Card from "./Components/Card";
 
 export default function Home() {
   return (
-    <main className="flex flex-col h-[200vh]">
+    <main className="flex flex-col">
       <Navbar />
-      <div className="px-24">
+      <div className="px-24 flex flex-col gap-8">
         <Hero />
+        <Card/>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }
