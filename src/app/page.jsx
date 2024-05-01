@@ -1,15 +1,15 @@
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import Hero from "./Components/Hero";
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
-      
-      <div className="flex flex-col py-2 px-8">
-        <Navbar />
+    <main className="flex flex-col h-[200vh]">
+      <Navbar />
+      <div className="px-24">
+        <Hero />
       </div>
-      
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

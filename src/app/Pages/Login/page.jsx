@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Login() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col h-[200vh]">
       <div className="flex flex-col py-2 px-8">
         <Navbar />
       </div>
