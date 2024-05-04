@@ -22,7 +22,7 @@ const Navbar = () => {
         <Link href="/" passHref>
           <i className="text-xs font-light hidden pt-1 md:flex">Home</i>
         </Link>
-        <Link href="/" passHref>
+        <Link href="/Pages/Course" passHref>
           <i className="text-xs font-light hidden pt-1 md:flex">My Course</i>
         </Link>
       </div>

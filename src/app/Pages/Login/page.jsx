@@ -8,7 +8,7 @@ export default function Login() {
     <main className="flex flex-col">
       <Navbar />
 
-      <div className="px-[350px] py-[50px] flex flex-col">
+      <div className="px-12 md:px-20 lg:px-[350px] py-[50px] flex flex-col">
         <h1 className="text-2xl font-bold text-center mb-6 tracking-wide">
           MASUK
         </h1>
