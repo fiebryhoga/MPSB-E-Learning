@@ -222,7 +222,7 @@ const Card = () => {
       </div>
 
       {/* Card */}
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 xl:grid-cols-3 grid-cols-1 gap-6">
         {data
           .filter((item) => {
             if (selectedClass !== "" && selectedClass !== "All") {
@@ -263,7 +263,7 @@ const Card = () => {
           .map((item) => (
             <div
               key={item.id}
-              className="flex flex-col w-[400px] h-[508px] rounded-xl shadow-md border border-black"
+              className="flex flex-col sm:w-[300px] sm:h-[408px] md:w-[400px] md:h-[508px] xl:w-[400px] xl:h-[508px] rounded-xl shadow-md border border-black"
             >
               <div className="w-full h-[65%] rounded-t-xl">
                 <img

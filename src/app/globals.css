@@ -6,6 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary-color: #112A46;
+  --secondary-color: #FED767;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,4 +32,14 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.bg-primary{
+  background-color: var(--primary-color);
+}
+.bg-secondary{
+  background-color: var(--secondary-color);
+}
+.text-yellow{
+  color: var(--secondary-color);
 }
