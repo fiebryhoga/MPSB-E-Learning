@@ -44,19 +44,18 @@ const Hero = () => {
           </Link>
         </div>
       </div>
-      <div className="md:w-[50%] relative h-[300px] md:h-full bg-black rounded-b-xl md:rounded-r-xl md:rounded-bl-none">
+      <div className="md:w-[50%] relative h-[300px] md:h-full rounded-b-xl md:rounded-r-xl md:rounded-bl-none">
         {slides.map((slide, index) => (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             key={index}
             src={slide}
             alt={`Slide ${index}`}
-            className={
-              "w-full h-full object-cover transition-all duration-1000 rounded-b-xl md:rounded-r-xl md:rounded-bl-none" +
-              (index === currentSlide
+            className={`w-full h-full object-cover transition-opacity duration-1000 ${
+              index === currentSlide
                 ? "opacity-100"
-                : "opacity-0 absolute top-0 left-0 transition-all duration-1000 rounded-b-xl md:rounded-r-xl md:rounded-bl-none")
-            }
+                : "opacity-0 absolute top-0 left-0"
+            } rounded-b-xl md:rounded-r-xl md:rounded-bl-none`}
             style={{ height: "100%", width: "100%" }}
           />
         ))}
