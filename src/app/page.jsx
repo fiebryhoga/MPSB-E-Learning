@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       <Navbar />
-      <div className="px-24 flex flex-col gap-8">
+      <div className="px-8 md:px-24 flex flex-col gap-8">
         <Hero />
         <Card/>
       </div>
