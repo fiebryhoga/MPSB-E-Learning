@@ -46,22 +46,24 @@ const Navbar = () => {
       <div
         className={
           nav
-            ? "fixed top-0 w-[70%] left-0 h-screen bg-white z-10 transition-all ease-in-out duration-700 opacity-95"
-            : "fixed top-0 w-[70%] right-[100%] h-screen bg-white z-10 transition-all ease-in-out duration-700"
+            ? "fixed top-0 w-[80%] left-0 h-screen bg-white z-10 transition-all ease-in-out duration-700 opacity-95"
+            : "fixed top-0 w-[80%] right-[100%] h-screen bg-white z-10 transition-all ease-in-out duration-700"
         }
       >
-        <AiOutlineClose
-          onClick={() => setNav(!nav)}
-          size={22}
-          className=" md:hidden absolute font-bold left-60 top-4 cursor-pointer"
-        />
-        <nav>
-          <ul className="flex flex-col mt-12">
-            <Link className="py-2 px-8 hover:bg-gray-100" href="/" passHref>
+        <nav className="w-full">
+          <ul className="flex flex-col mt-5 w-full">
+            <button className="w-full flex flex-row justify-end px-8">
+              <AiOutlineClose
+                onClick={() => setNav(!nav)}
+                size={22}
+                className=" md:hidden font-bold left-60 cursor-pointer"
+              />
+            </button>
+            <Link className="py-2 px-8 hover:bg-gray-200" href="/" passHref>
               <i className="text-xs font-light">Home</i>
             </Link>
             <Link
-              className="py-2 px-8 hover:bg-gray-100"
+              className="py-2 px-8 hover:bg-gray-200"
               href="/Pages/Course"
               passHref
             >

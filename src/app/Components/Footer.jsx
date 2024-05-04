@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="flex flex-row justify-center items-start w-[1440px] h-[340px] bg-[#112A46] py-16 px-32 mt-20">
-      <div className="flex flex-col justify-start items-start w-[50%] gap-4">
-        <div className="flex flex-row gap-2 mb-6 items-center">
+    <div className="flex flex-col md:flex-row justify-center items-start w-full bg-[#112A46] py-8 px-8 mt-20 bottom-0">
+      <div className="flex flex-col justify-start items-start w-full md:w-[50%] gap-4 lg:px-8 md:pr-6">
+        <div className="flex flex-row gap-2 mb-2 items-center">
           <Image
             src="/Assets/Images/Mangcoding.svg"
             alt="Mangcoding"
@@ -17,7 +17,7 @@ const Footer = () => {
           </h4>
         </div>
         <div className="flex flex-col gap-4">
-          <p className="w-[520px] text-xs text-[#DDDDDD] font-light tracking-wide leading-6">
+          <p className="text-xs text-[#DDDDDD] font-light tracking-wide leading-6">
             Lörem ipsum od ohet dilogi. Bell trabel, samuligt, ohöbel utom
             diska. Jinesade bel när feras redorade i belogi. FAR paratyp i
             muvåning, och pesask vyfisat. Viktiga poddradio har un mad och inde.
@@ -26,10 +26,10 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-col justify-start w-[50%] gap-4">
-        <div className="flex flex-row gap-16 mb-6 pt-1">
+      <div className="flex flex-col mt-8 md:mt-0 md:px-4 justify-start w-full gap-4 md:w-[50%]">
+        <div className="grid grid-cols-2 lg:flex lg:flex-row lg:px-8 gap-16 mb-6 pt-1">
           <div className="flex flex-col gap-4">
-            <h4 className="font-semibold tracking-wider text-white text-sm mb-8">
+            <h4 className="font-semibold tracking-wider text-white text-sm mb-4">
               Pages
             </h4>
             <a href="#" className="text-xs tracking-wider font-light text-[#DDDDDD]">
@@ -46,7 +46,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex flex-col gap-4">
-            <h4 className="font-semibold tracking-wider text-white text-sm mb-8">
+            <h4 className="font-semibold tracking-wider text-white text-sm mb-4">
               Service
             </h4>
             <a href="#" className="text-xs tracking-wider font-light text-[#DDDDDD]">
@@ -60,7 +60,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex flex-col gap-4 w-60">
-            <h4 className="font-semibold tracking-wider text-white text-sm mb-8">
+            <h4 className="font-semibold tracking-wider text-white text-sm mb-4">
               Contact
             </h4>
             <a href="#" className="flex items-center gap-4 text-xs tracking-wider font-light text-[#DDDDDD]">
