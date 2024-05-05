@@ -3,6 +3,7 @@ import Footer from "@/app/Components/Footer";
 import React from "react";
 import ProgressBar from "@/app/Components/ProgressBar";
 import Card from "@/app/Components/Card";
+import Header from "@/app/Components/Header";
 
 export default function Course() {
   return (
