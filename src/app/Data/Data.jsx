@@ -303,4 +303,13 @@ export const soal =[
     ],
     "jawabanBenar": "Python"
   }
-]
+];
+
+const mapel = {
+    kelas: "XII",
+    kurikulum: "Merdeka",
+    judulMateri: "Berpikir Komputasional dan Algoritma",
+    deskripsiMateri:
+      "Berpikir komputasional adalah pola berpikir dalam penyelesaian masalah (problem solving), untuk menemukan solusi yang efisien, efektif, dan optimal sehingga solusinya bisa dijalankan oleh manusia maupun mesin. Jadi, kegiatan berpikir komputasional adalah mencari strategi untuk mengatasi persoalan.",
+    judulMateriList: ["Abstraksi", "Algoritma", "Dekomposisi", "Pengenalan Pola"]
+  };
