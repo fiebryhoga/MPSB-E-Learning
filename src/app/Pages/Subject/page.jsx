@@ -1,45 +1,49 @@
-import React, { useState } from 'react';
-import data from '../data/data'; // Sesuaikan path dengan struktur proyek Anda
+import Navbar from "@/app/Components/Navbar";
+import Footer from "@/app/Components/Footer";
+import ProgressBar from "@/app/Components/ProgressBar";
+import Materi from "@/app/Components/Materi";
+import data from "../Data/Data";
 
-function Materi() {
-    const [isOpen, setIsOpen] = useState({});
-    const [selectedMateri, setSelectedMateri] = useState(null);
+import React from "react";
 
-    const handleMateriClick = (materi) => {
-        setSelectedMateri(materi === selectedMateri ? null : materi);
-        setIsOpen(prevState => ({ ...prevState, [materi]: !prevState[materi] }));
-    };
-
-    return (
-        <div className="flex flex-col justify-center items-center m-20">
-            {data.judulMateriList.map((materi, index) => (
-                <div key={index} className="w-full mb-16">
-                    <div
-                        className="w-full h-20 bg-gray-300 cursor-pointer flex items-center relative"
-                        onClick={() => handleMateriClick(materi)}
-                    >
-                        <span className="w-1/12 bg-gray-600 h-full"></span>
-                        <h3 className='p-4'><b>{materi}</b></h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={`h-6 w-6 absolute right-4 transition-transform duration-300 transform ${isOpen[materi] ? 'rotate-180' : ''}`}>
-                            <path d="M7 10l5 5 5-5z" fill="currentColor" />
-                        </svg>
-                    </div>
-                    <div className={`w-full bg-white rounded-md mt-3 overflow-hidden transition-opacity transition-transform duration-300 ease-in-out ${isOpen[materi] ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-2'}`}>
-                        {isOpen[materi] && (
-                            <div className="flex flex-col items-center gap-3">
-                                <a href="#" className="block p-4 w-[90%] bg-gray-300 hover:bg-gray-400">
-                                    Evaluasi
-                                </a>
-                                <a href="#" className="block p-4 w-[90%] bg-gray-300 hover:bg-gray-400">
-                                    Quiz
-                                </a>
-                            </div>
-                        )}
-                    </div>
-                </div>
-            ))}
+export default function Subject() {
+  return (
+    <main className="flex flex-col">
+      <Navbar />
+      <div className="w-full bg-primary py-20 px-10 bottom-0">
+        <p className="text-secondary text-center md:text-start text-xl">
+          <i>
+            <b>Kelas {data.kelas} - Kurikulum {data.kurikulum}</b>
+          </i>
+        </p>
+      </div>
+      <div className="w-full h-[500px] py-20 px-[8vw] mb-20 flex justify-between lg:flex-row md:flex-row sm:flex-col">
+        <div>
+          <h1 className="text-3xl my-8">{data.judulMateri}</h1>
+          <div className=" flex justify-between lg:flex-col md:flex-col sm-row">
+            <p className=" w-[40vw] text-justify h-[150px]">{data.deskripsiMateri}</p>
+            <button className="text-white w-[180px] mt-4 h-[50px] bg-[#666666] lg:self-center sm:self-start rounded hover:bg-[#9e9e9e]">Enroll</button>
+          </div>
         </div>
-    );
+        <div className="flex justify-center items-center">
+          <iframe className="lg:w-[480px] lg:h-[280px] md:w-[400px] md:h-[240px] sm:w-[350px] sm:h-[200px]" src="https://www.youtube.com/watch?v=_38OWbFYYh4&list=PLFIM0718LjIUHFRMzPJ0wGjx9_NlC5d1h&index=4" frameborder="0"></iframe>
+        </div>
+      </div>
+      <div className="px-6 py-3">
+        <p className="text-center text-xl mb-3">
+          <b>
+            <i>Progress :</i>
+          </b>
+        </p>
+        <ProgressBar />
+      </div>
+      <div className="flex justify-center items-center w-full py-5">
+        <span className="bg-gray-200 w-[95%] h-1"></span>
+      </div>
+      <div >
+        <Materi />
+      </div>
+      <Footer />
+    </main>
+  );
 }
-
-export default Materi;
