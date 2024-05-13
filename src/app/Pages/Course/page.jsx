@@ -16,7 +16,7 @@ export default function Course() {
           </i>
         </p>
       </div>
-      <div className=" px-6 py-3">
+      <div className=" px-8 md:px-24 mt-8">
         <p className="text-center text-xl mb-3">
           <b>
             <i>Progress :</i>

@@ -2,7 +2,7 @@ import Navbar from "@/app/Components/Navbar";
 import Footer from "@/app/Components/Footer";
 import ProgressBar from "@/app/Components/ProgressBar";
 import Materi from "@/app/Components/Materi";
-import data from "../Data/Data";
+import data from "../../Data/Data";
 
 import React from "react";
 
@@ -13,15 +13,15 @@ export default function Subject() {
       <div className="w-full bg-primary py-20 px-10 bottom-0">
         <p className="text-secondary text-center md:text-start text-xl">
           <i>
-            <b>Kelas {data.kelas} - Kurikulum {data.kurikulum}</b>
+            {/* <b>Kelas {data.kelas} - Kurikulum {data.kurikulum}</b> */}
           </i>
         </p>
       </div>
       <div className="w-full h-[500px] py-20 px-[8vw] mb-20 flex justify-between lg:flex-row md:flex-row sm:flex-col">
         <div>
-          <h1 className="text-3xl my-8">{data.judulMateri}</h1>
+          {/* <h1 className="text-3xl my-8">{data.judulMateri}</h1> */}
           <div className=" flex justify-between lg:flex-col md:flex-col sm-row">
-            <p className=" w-[40vw] text-justify h-[150px]">{data.deskripsiMateri}</p>
+            {/* <p className=" w-[40vw] text-justify h-[150px]">{data.deskripsiMateri}</p> */}
             <button className="text-white w-[180px] mt-4 h-[50px] bg-[#666666] lg:self-center sm:self-start rounded hover:bg-[#9e9e9e]">Enroll</button>
           </div>
         </div>

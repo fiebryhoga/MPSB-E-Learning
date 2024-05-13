@@ -5,13 +5,14 @@ import Card from "./Components/Card";
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col max-w-[1640px] mx-auto">
       <Navbar />
       <div className="px-8 md:px-24 flex flex-col gap-8">
         <Hero />
-        <Card/>
+        <Card />
       </div>
       <Footer />
     </main>
   );
 }
+
