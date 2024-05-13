@@ -16,6 +16,10 @@ module.exports = {
       colors: {
         primary : '#112A46',
         secondary : '#FED767'
+      },
+
+      boxShadow: {
+        'me': '5px 5px 10px 5px rgba(0, 0, 0, 0.15)',
       }
     },
   },
