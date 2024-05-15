@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import Navbar from "@/app/Components/Navbar";
 import React from "react";
 import Link from "next/link";
@@ -68,8 +69,6 @@ export default function Login() {
           .
         </p>
       </div>
-
-      <div></div>
     </main>
   );
 }

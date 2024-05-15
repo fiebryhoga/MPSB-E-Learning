@@ -2,6 +2,7 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
 import Card from "./Components/Card";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,6 +13,14 @@ export default function Home() {
         <Card />
       </div>
       <Footer />
+
+      <Link
+        className=" mx-2 hover:text-[#112A46] py-10"
+        href="/Pages/MatchingQuiz"
+        passHref
+      >
+        <u>buat ke evaluasi pencocokan</u>
+      </Link>
     </main>
   );
 }
