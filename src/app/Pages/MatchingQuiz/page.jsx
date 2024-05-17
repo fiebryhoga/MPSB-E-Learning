@@ -7,6 +7,7 @@ import Header from "@/app/Components/Header";
 import BoxTitle from "@/app/Components/BoxTitle";
 import { QuestionData } from "@/app/Data/Question";
 
+
 const ItemTypes = {
   ANSWER: "answer",
 };
@@ -228,7 +229,7 @@ const handleFinishAttempt = () => {
           </h3>
           <div className="flex flex-row w-full gap-4">
             <div className="flex flex-col w-[365px]">
-              <BoxTitle />
+              <BoxTitle>Campur Campur</BoxTitle>
               <div className="px-8 py-8 bg-[#CCCCCC] rounded-t-xl grid grid-cols-4 gap-2 mt-6">
                 {QuestionData.map((question, index) => (
                   <button

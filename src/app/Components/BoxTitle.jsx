@@ -1,8 +1,9 @@
-import React from "react";
+import React, { Children } from "react";
 import { FaUser } from "react-icons/fa6";
+import { QuestionData } from "../Data/Question";
 
 
-const BoxTitle = () => {
+const BoxTitle = ({ children }) => {
   return (
     <div className="flex flex-col w-full bg-[#CCCCCC] rounded-xl py-8 pl-4 gap-10">
       <div className="flex flex-row justify-start items-start gap-2">
@@ -10,8 +11,8 @@ const BoxTitle = () => {
           <p className="">logo</p>
         </div>
         <div className="flex flex-col">
-          <p className="text-lg font-normal ">Nama Materi</p>
-          <p className="text-xs font-light">10 Soal</p>
+          <p className="text-lg font-normal ">{children}</p>
+          <p className="text-xs font-light">{QuestionData.length} soal</p>
         </div>
       </div>
       <div className="flex flex-row px-4 gap-2">
