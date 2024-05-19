@@ -1,5 +1,6 @@
 import Navbar from "@/app/Components/Navbar";
 import Footer from "@/app/Components/Footer";
+import Modal from "@/app/Components/Modal";
 import React from "react";
 
 export default function Profile() {
@@ -36,9 +37,8 @@ export default function Profile() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center py-2 pt-10">
-      <button class="rounded-full text-lg font-semibold px-6 py-1 bg-secondary">Edit Profile</button>
-      </div>
+
+      <Modal />
       <Footer />
     </main>
   );
