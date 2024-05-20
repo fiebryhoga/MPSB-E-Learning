@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 "use client";
 import React, { useState } from "react";
@@ -16,8 +17,8 @@ const Navbar = () => {
           <Image src="/Assets/Images/Toggle.svg" width={25} height={25}></Image>
         </button>
         <Link className="hidden md:block" href="/" passHref>
-          <div>
-            <i className="font-bold text-sm">Lorem Ipsum</i>
+          <div className="flex justify-center items-center">
+            <img className="w-10" src="/Assets/Images/TELS.png" alt="" />
           </div>
         </Link>
         <Link href="/" passHref>
