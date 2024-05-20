@@ -245,7 +245,7 @@ const handleFinishAttempt = () => {
               </div>
               <div className="w-full py-2 bg-[#CCCCCC] rounded-b-xl flex justify-center items-center">
                 <button
-                  className="py-2 px-4 mb-2 bg-yellow-400 rounded-full text-sm"
+                  className="py-2 px-4 mb-2 bg-yellow-400 rounded-full text-sm sm:px-2"
                   onClick={() => setShowConfirmationPopup(true)}
                 >
                   Kumpulkan

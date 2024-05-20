@@ -19,7 +19,7 @@ export default function Profile() {
       </div>
       <div className="grid grid-cols-6 gap-4 pt-10">
         <div className="col-start-2 col-span-4">
-          <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-4 lg:px-24 md:px-10 sm:px-5 py-5  font-medium italic bg-white rounded-lg shadow-me">
+          <div className="grid px-5 lg:grid-cols-2 px-24 md:grid-cols-1 gap-4 px-10 sm:px-5 py-5 text-sm mx-2 font-medium italic bg-white rounded-lg shadow-me">
             <div className="text-slate-500">Nama</div>
             <div>Tifa Lockheart</div>
             <div className="text-slate-500">Pendidikan</div>
@@ -28,8 +28,8 @@ export default function Profile() {
             <div>di hati ku</div>
           </div>
         </div>
-        <div className="col-start-2 col-span-4 pt-8">
-          <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-4 lg:px-24 md:px-10 sm:px-5 py-5 font-medium italic bg-white rounded-lg shadow-me">
+        <div className="col-start-2 col-span-4 pt-5">
+          <div className="grid px-5 text-sm lg:grid-cols-2 px-5 md:grid-cols-1 gap-4 px-10 sm:px-5 py-5 font-medium italic bg-white rounded-lg shadow-me">
             <div className="text-slate-500">Kontak</div>
             <div>08122121888</div>
             <div className="text-slate-500">Email</div>
