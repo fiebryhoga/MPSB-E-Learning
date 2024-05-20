@@ -24,7 +24,7 @@ const DraggableAnswer = ({ answer, index, fromOption }) => {
   return (
     <div
       ref={drag}
-      className={`flex flex-row border border-black rounded-lg min-w-[283px] py-1 bg-[#E1E1E1] px-6 gap-3 items-center ${
+      className={`flex flex-row border border-black rounded-lg lg:min-w-[283px] md:min-w-[200px] py-1 bg-[#E1E1E1] px-6 gap-3 items-center ${
         isDragging ? "opacity-50 cursor-grabbing" : "cursor-grab"
       }`}
     >
@@ -50,7 +50,7 @@ const DroppableOption = ({ option, index, currentAnswer, onDropAnswer }) => {
   return (
     <div
       ref={drop}
-      className={`flex flex-row border border-black rounded-lg min-w-[283px] py-1 px-6 gap-3 items-center ${
+      className={`flex flex-row border border-black rounded-lg lg:min-w-[283px] md:min-w-[200px] py-1 px-6 gap-3 items-center ${
         isOver ? "bg-yellow-200" : "bg-[#E1E1E1]"
       }`}
     >
@@ -212,7 +212,7 @@ const handleFinishAttempt = () => {
   setScore(calculatedScore); 
   setShowConfirmationPopup(false); 
   setShowResultPopup(true); 
-
+  
   console.log("Total Questions:", totalQuestion);
   console.log("Correct Questions:", correctQuestions);
   console.log("Score:", calculatedScore);
@@ -223,7 +223,7 @@ const handleFinishAttempt = () => {
       <main className="flex flex-col h-[160vh]">
         <Navbar />
         <Header>Sub Materi</Header>
-        <div className="flex flex-col px-36">
+        <div className="flex flex-col lg:px-36 md:px-16">
           <h3 className="py-12 font-semibold text-2xl">
             Lorem ipsum dolor sit amet consectetur.
           </h3>
@@ -257,8 +257,8 @@ const handleFinishAttempt = () => {
                 <h4 className="text-center text-base py-6">
                   {QuestionData[currentQuestion].question}
                 </h4>
-                <div className="flex flex-row px-16 mt-10 justify-between">
-                  <div className="flex flex-col gap-6">
+                <div className="flex flex-row lg:px-16 md:px-10 mt-10 justify-between">
+                  <div className="flex flex-col gap-6 md:mr-6">
                     {QuestionData[currentQuestion].options.map(
                       (option, index) => (
                         <DroppableOption
