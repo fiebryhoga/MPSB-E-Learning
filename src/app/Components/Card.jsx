@@ -121,21 +121,21 @@ const Card = () => {
                 </button>
                 <button
                   className="block border bg-white border-black rounded-full lg:min-w-[160px] md:min-w-[160px] md:px-6 min-w-[50%] py-[7px] px-8 hover:bg-gray-200"
-                  onClick={() => handleSelect("kelas", "Kelas X")}
+                  onClick={() => handleSelect("kelas", "Kelas 10")}
                 >
-                  Kelas X
+                  Kelas 10
                 </button>
                 <button
                   className="block border bg-white border-black rounded-full lg:min-w-[160px] md:min-w-[160px] md:px-6 min-w-[50%] py-[7px] px-8 hover:bg-gray-200"
-                  onClick={() => handleSelect("kelas", "Kelas XI")}
+                  onClick={() => handleSelect("kelas", "Kelas 11")}
                 >
-                  Kelas XI
+                  Kelas 11
                 </button>
                 <button
                   className="block border bg-white border-black rounded-full lg:min-w-[160px] md:min-w-[160px] md:px-6 min-w-[50%] py-[7px] px-8 hover:bg-gray-200"
-                  onClick={() => handleSelect("kelas", "Kelas XII")}
+                  onClick={() => handleSelect("kelas", "Kelas 12")}
                 >
-                  Kelas XII
+                  Kelas 12
                 </button>
               </div>
             )}
@@ -162,15 +162,15 @@ const Card = () => {
                 </button>
                 <button
                   className="block border bg-white border-black rounded-full lg:min-w-[160px] md:min-w-[160px] md:px-6 min-w-[50%] py-[7px] px-8 hover:bg-gray-200"
-                  onClick={() => handleSelect("jurusan", "TKJ")}
+                  onClick={() => handleSelect("jurusan", "Teknik Komputer Jaringan")}
                 >
-                  TKJ
+                  Teknik Komputer Jaringan
                 </button>
                 <button
                   className="block border bg-white border-black rounded-full lg:min-w-[160px] md:min-w-[160px] md:px-6 min-w-[50%] py-[7px] px-8 hover:bg-gray-200"
-                  onClick={() => handleSelect("jurusan", "RPL")}
+                  onClick={() => handleSelect("jurusan", "Informatika")}
                 >
-                  RPL
+                  Informatika
                 </button>
                 <button
                   className="block border bg-white border-black rounded-full lg:min-w-[160px] md:min-w-[160px] md:px-6 min-w-[50%] py-[7px] px-8 hover:bg-gray-200"
@@ -215,9 +215,9 @@ const Card = () => {
               </button>
               <button
                 className="block border bg-white border-black rounded-full lg:min-w-[160px] md:min-w-[160px] md:px-6 min-w-[50%] py-[7px] px-8 hover:bg-gray-200"
-                onClick={() => handleSelect("kurikulum", "K-Merdeka")}
+                onClick={() => handleSelect("kurikulum", "Kurikulum Merdeka")}
               >
-                K-Merdeka
+                Kurikulum Merdeka
               </button>
             </div>
           )}
@@ -265,7 +265,7 @@ const Card = () => {
             })
             .slice(0, showAllCards ? data.length : 6)
             .map((item) => (
-              <Link key={item.id} href="/Pages/Subject" passHref>
+              <Link key={item.id} href={`/Pages/Subject?id=${item.id}`} passHref>
                 <div className="flex flex-col min-w-[320px] min-h-[400px] md:minw-[360px] md:max-h-[490px] lg:min-w-[310px] lg:max-h-[510px] rounded-xl shadow-md border justify-between border-black">
                   <div className="w-full h-2/3 rounded-t-xl">
                     <img

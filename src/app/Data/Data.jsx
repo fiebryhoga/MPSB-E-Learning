@@ -1,86 +1,28 @@
-export const data = [
-  {
-    id: 1,
-    subject: "K3LH dan Budaya Kerja Industri",
-    cover: "/Assets/Images/card.png",
-    class: "Kelas X",
-    department: "Teknik Komputer dan Jaringan",
-    curriculum: "Kurikulum 2013",
-  },
-  {
-    id: 2,
-    subject: "Matematika Dasar",
-    cover: "/Assets/Images/card.png",
-    class: "Kelas X",
-    department: "Teknik Komputer dan Jaringan",
-    curriculum: "Kurikulum 2013",
-  },
-  {
-    id: 3,
-    subject: "Bahasa Indonesia",
-    cover: "/Assets/Images/card.png",
-    class: "Kelas X",
-    department: "Teknik Komputer dan Jaringan",
-    curriculum: "Kurikulum 2013",
-  },
-  {
-    id: 4,
-    subject: "Pengantar Teknologi Informasi",
-    cover: "/Assets/Images/card.png",
-    class: "Kelas XI",
-    department: "Teknik Komputer dan Jaringan",
-    curriculum: "Kurikulum 2013",
-  },
-  {
-    id: 5,
-    subject: "Jaringan Dasar",
-    cover: "/Assets/Images/card.png",
-    class: "Kelas XI",
-    department: "Teknik Komputer dan Jaringan",
-    curriculum: "Kurikulum Merdeka",
-  },
-  {
-    id: 6,
-    subject: "Pemrograman Dasar",
-    cover: "/Assets/Images/card.png",
-    class: "Kelas XI",
-    department: "Teknik Komputer dan Jaringan",
-    curriculum: "Kurikulum 2013",
-  },
-  {
-    id: 7,
-    subject: "Pemrograman Web",
-    cover: "/Assets/Images/card.png",
-    class: "Kelas XII",
-    department: "Teknik Komputer dan Jaringan",
-    curriculum: "Kurikulum 2013",
-  },
-  {
-    id: 8,
-    subject: "Teknik Komputer dan Jaringan",
-    cover: "/Assets/Images/card.png",
-    class: "Kelas XII",
-    department: "Teknik Komputer dan Jaringan",
-    curriculum: "Kurikulum 2013",
-  },
-  {
-    id: 9,
-    subject: "Administrasi Sistem Jaringan",
-    cover: "/Assets/Images/card.png",
-    class: "Kelas XII",
-    department: "Teknik Komputer dan Jaringan",
-    curriculum: "Kurikulum 2013",
-  },
-  {
-    id: 10,
-    subject: "Praktik Kerja Industri",
-    cover: "/Assets/Images/card.png",
-    class: "Kelas XII",
-    department: "Rekayasa Perangkat Lunak",
-    curriculum: "Kurikulum 2013",
-  },
-];
+import axios from 'axios';
 
+let data = [];
+
+const fetchData = async () => {
+  try {
+    const response = await axios.get('https://mpsb-e-learning.my.id/api/mapels');
+    data = response.data.courses.map(course => ({
+      id: course.id,
+      subject: course.course_name,
+      cover: course.photo_link || "/Assets/Images/default_cover.png",
+      class: course.grade.grade_name,
+      department: course.major.major_name,
+      curriculum: course.curriculum.curriculum_name,
+    }));
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+};
+
+fetchData();
+
+export { fetchData };
+
+export { data };
 
 export const soal =[
   {

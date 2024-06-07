@@ -1,56 +1,57 @@
-import React from "react";
+"use client"; 
+
+import React, { useEffect, useState } from "react";
 import Navbar from "@/app/Components/Navbar";
 import Header from "@/app/Components/Header";
 import Footer from "@/app/Components/Footer";
-
-// const subJudul = [
-//   {
-//     id: 1,
-//     subjudul: "anjing anjing",
-//   },
-//   {
-//     id: 2,
-//     subjudul: "anjing anjing",
-//   },
-//   {
-//     id: 3,
-//     subjudul: "anjing anjing",
-//   },
-//   {
-//     id: 4,
-//     subjudul: "anjing anjing",
-//   },
-//   {
-//     id: 5,
-//     subjudul: "anjing anjing",
-//   },
-
-// ]
+import axios from "axios";
 
 const subMateri = () => {
+  const [data, setData] = useState(null);
+  const [itemId, setItemId] = useState(null);
+  const [judulMateri, setJudulMateri] = useState(null);
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+    const judul = urlParams.get('judulMateri');
+    if (id && judul) {
+      console.log(`ID: ${id}, Judul Materi: ${judul}`);
+      setItemId(id);
+      setJudulMateri(judul);
+      
+      axios.get(`https://mpsb-e-learning.my.id/api/mapels/${id}`)
+        .then(response => {
+          const course = response.data.courses;
+          const subcourse = course.subcourses.find(sub => sub.subcourse_name === judul);
+          setData(subcourse);
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+    }
+  }, []);
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <main className="flex flex-col max-w-[1640px] mx-auto">
       <Navbar />
-      <Header>Judul Materi - Kelas XX - Kurikulum XX</Header>
+      <Header> {data.subcourse_name} - Kelas {data.grade_id}  - Kurikulum {data.curriculum_id}</Header>
       <div className="px-8 md:px-10 flex flex-col justify-center w-full items-center md:justify-center md:items-center">
         <div className="flex flex-row gap-12">
           <div className="flex flex-col md:w-full">
             <div className=" justify-between flex flex-row items-start md:mb-5">
               <h2 className=" font-bold text-5xl w-60 leading-relaxed md:px-20 md:w-full md:text-2xl ">
-                Judul Sub Materi
+                {data.subcourse_name}
               </h2>
               <u className="font-light text-xs pt-2 md:hidden">
                 <i>Judul Sub Materi</i>
               </u>
             </div>
-            <p className=" -mt-2 text-justify">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p className=" -mt-2 text-justify" dangerouslySetInnerHTML={{ __html: data.content }}>
             </p>
           </div>
           <div className="hidden md:flex w-[322px] h-auto border border-black border-opacity-80 rounded-xl py-4 flex-col gap-4 items-center justify-center">

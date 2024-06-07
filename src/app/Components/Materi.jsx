@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import mapel from "../Data/Data"; // Correctly import the default export
 
-function Materi() {
+function Materi({ judulMateriList, id }) {
   const [isOpen, setIsOpen] = useState({});
   const [selectedMateri, setSelectedMateri] = useState(null);
 
@@ -12,7 +11,7 @@ function Materi() {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      {mapel.judulMateriList.map((materi, index) => (
+      {judulMateriList.map((materi, index) => (
         <div key={index} className="w-full mb-8">
           <div
             className="w-full h-20 bg-gray-300 cursor-pointer flex items-center relative"
@@ -42,6 +41,12 @@ function Materi() {
             {isOpen[materi] && (
               <div className="flex flex-col items-center gap-1">
                 <a
+                  href={`/Pages/subMateri_1?id=${id}&judulMateri=${encodeURIComponent(materi)}`}
+                  className="block p-4 w-[90%] bg-gray-300 hover:bg-gray-400"
+                >
+                  Materi
+                </a>
+                <a
                   href="#"
                   className="block p-4 w-[90%] bg-gray-300 hover:bg-gray-400"
                 >
@@ -58,6 +63,22 @@ function Materi() {
           </div>
         </div>
       ))}
+      <div className="w-full h-20 bg-gray-300 cursor-pointer flex flex-col mb-8">
+          <a
+                  href="#"
+                  className="block p-4 w-full h-full bg-gray-300 hover:bg-gray-400"
+                >
+                  UTS
+                </a>
+      </div>
+      <div className="w-full h-20 bg-gray-300 cursor-pointer flex flex-col items-center">
+          <a
+                  href="#"
+                  className="block p-4 w-full h-full bg-gray-300 hover:bg-gray-400"
+                >
+                  UAS
+                </a>
+      </div>
     </div>
   );
 }
